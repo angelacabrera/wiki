@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to "Wikinimous", index_path, class: "navbar-brand" %>
+    <form class="d-flex">
+      <%= link_to "New Article", articles_new_path(@article) %>
+    </form>
+  </div>
+</nav>
+
+<div class="container d-flex justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-8 md-6">
+      <ul>
+        <% @articles.each do |article| %>
+            <li class="list-group">
+            <%= link_to article.title, article_path(article), class: "link-title" %>
+            <p><%= article.content %></p>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+    

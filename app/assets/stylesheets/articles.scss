@@ -1,0 +1,52 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.row {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.new_article, .edit_article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: start;
+    justify-items: self-start;
+    align-items: flex-end;
+}
+
+h1, h5 {
+    margin-bottom: 30px;
+}
+
+h5 {
+    margin-top: 30px;
+}
+
+.container {
+    margin-top: 50px;
+
+}
+
+.navbar-light {
+
+    .navbar-brand {
+        color: grey;
+    }
+}
+
+.link-title {
+    font-size: 30px;
+}

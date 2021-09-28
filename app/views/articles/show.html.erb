@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to "Wikinimous", index_path, class: "navbar-brand" %>
+    <form class="d-flex">
+      <%= link_to "New Article", articles_new_path(@article) %>
+    </form>
+  </div>
+</nav>
+
+<div class="container d-flex justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-8 md-6">
+      <div class="actions">
+      <h1><%= @article.title %></h1>
+        <%= link_to edit_article_path(@article) do %>
+          <i class="fas fa-edit"></i>
+        <% end %>
+        
+        <%= link_to delete_article_path(@article), method: :delete, data: {confirm: "Are you sure?"} do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      </div>
+      <p><%= @article.content %><p>
+    </div>
+     <div class="link-back justify-content-end">
+      <%= link_to "back to list", index_path %>
+    </div>
+  </div>
+   
+</div> 
+    
+      
